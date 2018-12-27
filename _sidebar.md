@@ -10,6 +10,7 @@
     * [String对象追加](class/String-prototype)
     * [window下的方法](class/window-fun)
     * [owner下的方法](class/owner-fun)
+    * [mainVue类](class/mainVue)
     * [Chain类](class/Chain)
     * [ShadeBox类](class/ShadeBox)
     * [Hasher类](class/Hasher)
