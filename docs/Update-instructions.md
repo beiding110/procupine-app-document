@@ -1,5 +1,17 @@
 # 版本&更新内容说明
 
+### v1.0.12.4
+
+* mixin函数加入了待混入对象防错机制；
+
+* ajaxResCheck加入的error的中英文对照；
+
+### v1.0.12.3
+
+* Hasher对象中，如果hash值没有改变，则手动调用一次对应值的watch方法；
+
+* formValidateTrans自动表单验证加入require全空格验证；
+
 ### v1.0.11.4
 
 * 加入win对象，包含g和r方法，对应location.href和location.replace;
