@@ -1,5 +1,5 @@
 * 首页
-    * [快速开始](Readme)
+    * [快速开始](README)
 
 * 历史版本及更新说明
     * [版本&更新说明](docs/Update-instructions)
