@@ -1,5 +1,17 @@
 # 版本&更新内容说明
 
+### v1.2.2.4
+
+* 新增方法getType；
+
+### v1.2.2.3
+
+* win对象下argHandler优化配适hash存在情况；
+
+### v1.1.12.1
+
+* 修复Arabia_to_Chinese小数部分会溢出的问题；
+
 ### v1.1.7.2
 
 * 加入getLocation方法，用于在getSearch和getHash方法中复用；

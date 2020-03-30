@@ -723,3 +723,33 @@ mixin(a, b) ===> {age: 18, name: "yang"}
 mixin(a, c, true) ===> {age: 23, name: "yang"}
 
 ```
+
+## getType(obj)
+
+混合对象
+
+### 参数
+
+参数名 | 类型 | 默认值 | 含义 | 必填
+- | - | - | - | -
+obj | Any | - | 要判断类型的变量 | *
+
+### 返回值
+
+`String` 变量的类型
+
+### 示例
+
+```js
+
+getType('1') ===> 'string'
+
+getType(1) ===> 'number'
+
+getType({}) ===> 'object'
+
+getType([]) ===> 'array'
+
+getType(true) ===> 'boolean'
+
+```
