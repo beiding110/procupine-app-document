@@ -118,3 +118,198 @@ new Vue({
 })
 
 ```
+
+# app-supply中追加的Vue方法
+
+## getRoute(key)
+
+获取vue-router中的params
+
+### 参数
+
+参数名 | 类型 | 默认值 | 含义 | 必填
+- | - | - | - | -
+key | String | undefined | 需要获取的params名称 | *
+
+### 返回值
+
+- 对应的params
+
+### 示例
+
+```js
+
+new Vue({
+    el: '#app',
+    mounted() {
+        var id = this.getRoute('id')
+    }
+})
+
+```
+
+## getQuery(key)
+
+获取vue-router中的query
+
+### 参数
+
+参数名 | 类型 | 默认值 | 含义 | 必填
+- | - | - | - | -
+key | String | undefined | 需要获取的query名称 | 
+
+### 返回值
+
+- 对应的query
+
+### 示例
+
+```js
+
+new Vue({
+    el: '#app',
+    mounted() {
+        var id = this.getQuery('id')
+    }
+})
+
+```
+
+## getStore(key)
+
+获取vuex中的state
+
+### 参数
+
+参数名 | 类型 | 默认值 | 含义 | 必填
+- | - | - | - | -
+key | String | undefined | 需要获取的state名称 | *
+
+### 返回值
+
+- 对应的state
+
+### 示例
+
+```js
+
+new Vue({
+    el: '#app',
+    mounted() {
+        var id = this.getStore('id')
+    }
+})
+
+```
+
+## getGetters(key)
+
+获取vuex中的getters
+
+### 参数
+
+参数名 | 类型 | 默认值 | 含义 | 必填
+- | - | - | - | -
+key | String | undefined | 需要获取的getters名称 | *
+
+### 返回值
+
+- 对应的getters
+
+### 示例
+
+```js
+
+new Vue({
+    el: '#app',
+    mounted() {
+        var id = this.getGetters('id')
+    }
+})
+
+```
+
+## goto(obj)
+
+使用vue-router跳转页面
+
+### 参数
+
+参数名 | 类型 | 默认值 | 含义 | 必填
+- | - | - | - | -
+key | String/Object | undefined | 需要跳转的路由参数，同router.push | *
+
+### 返回值
+
+- 
+
+### 示例
+
+```js
+
+new Vue({
+    el: '#app',
+    mounted() {
+        // this.goto('/login');
+
+        this.goto({
+            path: '/login',
+            query: {
+                id: 123
+            }
+        });
+    }
+})
+
+```
+
+## newRule(arg)
+
+获取vue-router中的params
+
+### 参数
+
+参数名 | 类型 | 默认值 | 含义 | 必填
+- | - | - | - | -
+arg[0] | String | undefined | 错误提示中的label名称 | *
+arg[1,2,3...] | String | undefined | 下方对应的可选内容 | *
+
+```
+
+required: '必填',
+max10: '最长10位（可自定义）',
+min10: '最长10位（可自定义）',
+mobile: '手机号',
+string: '字符串',
+number: '数字',
+boolean: '布尔',
+method: '方法',
+regexp: '正则',
+integer: 'integer',
+float: '浮点数',
+array: '数组',
+object: '对象',
+enum: 'enum',
+date: '日期',
+url: 'url地址',
+hex: '哈希',
+email: '电子邮件',
+ucc: '统一信用代码',
+
+```
+
+### 返回值
+
+- 对应的el-form-item使用的规则
+
+### 示例
+
+```html
+
+<el-form-item
+    label="手机号"
+    prop="form.mobile"
+    :rules="newRule('手机号', 'required', 'mobile')"
+></el-form-item>
+
+```
